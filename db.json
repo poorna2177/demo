@@ -1,14 +1,67 @@
+[
+
 {
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  "code" : "STRIPE",
+  "displayName" : "Stripe",
+  "paymentMethods": {
+    "CARDS": {
+      "code" : "CARDS",
+      "currencies" : ["USD", "CAD"],
+      "enable" : true
+    },
+
+    "ALIPAY": {
+      "code" : "ALIPAY",
+      "currencies" : ["USD"],
+      "enable" : true
+    },
+
+    "KLARNA_BNPL": {
+      "code" : "KLARNA_BNPL",
+      "currencies" : ["USD"],
+      "enable" : true
+    }
+  },
+  "merchantProperties": [
+    {
+      "name": "clientSecret",
+      "displayName": "Client Secret",
+      "mandatory": true,
+      "regex": null,
+      "type": "TEXT"
+    }
+  ]
+},
+
+{
+  "code" : "AUTHORIZE_NET",
+  "displayName" : "Authorize.net",
+  "paymentMethods": {
+    "CARDS": {
+      "code" : "CARDS",
+      "currencies" : ["USD"],
+      "enable" : true
+    }
+  },
+  "merchantProperties": [
+    {
+      "name": "apiLoginId",
+      "displayName": "API Login Id",
+      "mandatory": true,
+      "regex": null,
+      "type": "TEXT"
+    },
+    {
+      "name": "apiTransactionKey",
+      "displayName": "API Transaction Key",
+      "mandatory": true,
+      "type": "TEXT"
+    }
+  ]
 }
+
+
+
+
+
+]
